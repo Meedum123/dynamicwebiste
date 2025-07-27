@@ -2,8 +2,16 @@
 <html>
 <head>
   <title>Dynamic CI/CD Site</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <h1><%= message %> - This is an update!</h1>
+  <h1 id="message"><%= message %></h1>
+  <button id="changeBtn">Change Message</button>
+
+  <script>
+    document.getElementById('changeBtn').addEventListener('click', () => {
+      document.getElementById('message').textContent = 'You clicked the button! 🎉';
+    });
+  </script>
 </body>
 </html>
